@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Runde-Semibold';
-  src: url('./fonts/OpenRunde-Semibold.otf');
+  font-family: 'Runde-Bold';
+  src: url('./fonts/OpenRunde-Bold.otf');
 }
 
 @font-face {
@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: 'Runde';
-  src: url('./fonts/OpenRunde-Regular.otf');
+  font-family: 'Runde-Semibold';
+  src: url('./fonts/OpenRunde-Semibold.otf');
 }
 
 * {
@@ -21,4 +21,9 @@
 
 ::selection {
   background-color: #f5b41a;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
 }
