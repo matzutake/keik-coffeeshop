@@ -1,6 +1,16 @@
 @font-face {
-  font-family: 'Runde';
+  font-family: 'Runde-Semibold';
   src: url('./fonts/OpenRunde-Semibold.otf');
+}
+
+@font-face {
+  font-family: 'Runde-Medium';
+  src: url('./fonts/OpenRunde-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Runde';
+  src: url('./fonts/OpenRunde-Regular.otf');
 }
 
 * {
