@@ -14,21 +14,28 @@ export default {}
 
 <style lang="scss" scoped>
 .header-menu {
-  font-family: serif;
-  display: flex;
-  border-radius: 2rem;
-  background-color: $color-black;
   color: $color-white;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 2rem;
-  justify-content: space-around;
-  padding: 0 48px;
-  gap: 16px;
+  background-color: $color-black;
+  display: flex;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  align-items: center;
+  gap: 32px;
+  padding: 0 32px;
+  border-radius: 24px;
+  box-shadow: 0 0 10px 5px rgba(255, 239, 198, 0.35);
 
   &__title {
     font-family: 'Runde-Semibold';
-    font-size: 2rem;
+    font-size: 32px;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 8px rgba(255, 239, 198, 0.5);
+    cursor: pointer;
+    transition: 200ms;
+
+    &:hover {
+      text-shadow: 0 0 16px rgba(255, 239, 198, 0.7);
+    }
   }
 }
 </style>

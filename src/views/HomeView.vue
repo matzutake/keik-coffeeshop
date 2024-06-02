@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
-    <KHeader />
+    <div class="header-wrapper">
+      <KHeader />
+    </div>
+    <div class="block-image"></div>
   </div>
 </template>
 
@@ -24,10 +27,24 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.header-wrapper {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.block-image {
+  background-image: url('@/assets/img/background.jpg');
+  height: 800px;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  border-bottom: 8px solid $color-yellow;
 }
 </style>
