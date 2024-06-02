@@ -1,19 +1,25 @@
 <template>
   <div class="wrapper">
-    <div class="header-wrapper">
-      <KHeader />
-    </div>
-    <div class="block-image"></div>
+    <KHeader />
+    <KPreview />
+    <KInfo />
+    <Contacts />
   </div>
 </template>
 
 <script>
 import KHeader from '@/components/Header.vue'
+import KPreview from '@/components/KPreview.vue'
+import KInfo from '@/components/KInfo.vue'
+import Contacts from '@/components/Contacts.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    KHeader
+    KHeader,
+    KPreview,
+    KInfo,
+    Contacts
   },
   mounted() {
     const loader = document.getElementById('preloader')
@@ -27,24 +33,8 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+  @include scrollbar;
   display: flex;
   flex-direction: column;
-}
-
-.header-wrapper {
-  padding: 16px;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-}
-
-.block-image {
-  background-image: url('@/assets/img/background.jpg');
-  height: 800px;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  width: 100%;
-  border-bottom: 8px solid $color-yellow;
 }
 </style>

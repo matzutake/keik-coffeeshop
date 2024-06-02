@@ -1,11 +1,13 @@
 <template>
-  <ul class="header-menu">
-    <li>Меню</li>
-    <li>Контакты</li>
-    <li class="header-menu__title">Кейк</li>
-    <li>Вакансии</li>
-    <li>О нас</li>
-  </ul>
+  <div class="header-wrapper">
+    <ul class="header-menu">
+      <li>Меню</li>
+      <li>Контакты</li>
+      <li class="header-menu__title">Кейк</li>
+      <li>Вакансии</li>
+      <li>О нас</li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -13,6 +15,15 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+.header-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
 .header-menu {
   color: $color-white;
   background-color: $color-black;
