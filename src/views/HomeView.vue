@@ -4,6 +4,7 @@
     <KPreview />
     <KInfo />
     <Contacts />
+    <KFooter />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import KHeader from '@/components/Header.vue'
 import KPreview from '@/components/KPreview.vue'
 import KInfo from '@/components/KInfo.vue'
 import Contacts from '@/components/Contacts.vue'
+import KFooter from '@/components/KFooter.vue'
 
 export default {
   name: 'HomeView',
@@ -19,7 +21,8 @@ export default {
     KHeader,
     KPreview,
     KInfo,
-    Contacts
+    Contacts,
+    KFooter
   },
   mounted() {
     const loader = document.getElementById('preloader')

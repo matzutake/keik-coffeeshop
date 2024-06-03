@@ -23,7 +23,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 72px;
+  padding: 108px 72px;
+  border-top: 12px solid $color-yellow;
   gap: 48px;
 }
 </style>
