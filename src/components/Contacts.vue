@@ -96,7 +96,6 @@ export default {}
 }
 
 .contacts {
-  border-bottom: 12px solid $color-yellow;
   display: flex;
   flex-direction: column;
   position: relative;

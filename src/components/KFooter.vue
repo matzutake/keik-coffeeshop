@@ -1,10 +1,18 @@
 <template>
   <div class="footer">
     <div class="links">
-      <div class="whasap"></div>
-      <div class="vk"></div>
-      <div class="telegram"></div>
-      <div class="insta"></div>
+      <div class="messenger">
+        <img src="@/assets/icons/whatsapp.svg" />
+      </div>
+      <div class="messenger">
+        <img src="@/assets/icons/vk.svg" />
+      </div>
+      <div class="messenger">
+        <img src="@/assets/icons/telegram.svg" />
+      </div>
+      <div class="messenger">
+        <img src="@/assets/icons/instagram.svg" />
+      </div>
     </div>
     <p class="subtitle">© 2024 Кейк</p>
   </div>
@@ -14,4 +22,30 @@
 export default {}
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="scss" scoped>
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  color: #999999;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+
+  .messenger {
+    border: 2px solid #999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+  }
+}
+</style>
