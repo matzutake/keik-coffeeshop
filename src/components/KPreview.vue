@@ -1,5 +1,7 @@
 <template>
-  <div class="preview"></div>
+  <div class="preview">
+    <img src="@/assets/img/background.jpg" class="background" />
+  </div>
 </template>
 
 <script>
@@ -8,7 +10,12 @@ export default {}
 
 <style lang="scss" scoped>
 .preview {
-  background-color: #999999;
-  height: 800px;
+  height: 70rem;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 </style>

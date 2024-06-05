@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="links">
       <div class="messenger">
-        <img src="@/assets/icons/whatsapp.svg" />
+        <img class="icon" src="@/assets/icons/whatsapp.svg" />
       </div>
       <div class="messenger">
         <img src="@/assets/icons/vk.svg" />
@@ -46,6 +46,18 @@ export default {}
     width: 56px;
     height: 56px;
     border-radius: 28px;
+    transition: 200ms;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-yellow;
+    }
   }
+}
+
+.subtitle:hover {
+  transition: 200ms;
+  color: $color-black;
+  cursor: default;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="header-wrapper">
     <ul class="header-menu">
+      <li>Акции</li>
       <li>Меню</li>
-      <li>Контакты</li>
       <li class="header-menu__title">Кейк</li>
-      <li>Вакансии</li>
+      <li>Контакты</li>
       <li>О нас</li>
     </ul>
   </div>
