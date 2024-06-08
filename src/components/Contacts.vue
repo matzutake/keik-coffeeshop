@@ -1,5 +1,5 @@
 <template>
-  <div class="contacts">
+  <div class="contacts" id="contacts">
     <div class="black-ground">
       <h1>Свяжитесь с нами</h1>
       <hr />

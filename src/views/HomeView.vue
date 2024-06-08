@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <KHeader />
     <KPreview />
     <KInfo />
     <Contacts />
@@ -9,7 +8,6 @@
 </template>
 
 <script>
-import KHeader from '@/components/Header.vue'
 import KPreview from '@/components/KPreview.vue'
 import KInfo from '@/components/KInfo.vue'
 import Contacts from '@/components/Contacts.vue'
@@ -18,7 +16,6 @@ import KFooter from '@/components/KFooter.vue'
 export default {
   name: 'HomeView',
   components: {
-    KHeader,
     KPreview,
     KInfo,
     Contacts,
