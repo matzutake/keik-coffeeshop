@@ -1,20 +1,44 @@
 <template>
   <div class="footer">
-    <div class="links">
-      <div class="messenger">
-        <img class="icon" src="@/assets/icons/whatsapp.svg" />
+    <div class="footer__wrapper">
+      <div class="footer__text">
+        <div class="nav">
+          <div class="footer__logo">Кейк</div>
+
+          <ul class="footer__nav">
+            <li class="footer__nav-item" @click="$router.push('/')">Главная</li>
+            <li class="footer__nav-item" @click="$router.push('/menu')">Меню</li>
+            <li class="footer__nav-item" @click="$router.push('/about')">О нас</li>
+            <li class="footer__nav-item" @click="$router.push('/contacts')">Контакты</li>
+          </ul>
+
+          <div class="subscribe">
+            <input
+              type="email"
+              class="subscribe__input"
+              placeholder="Ваша почта"
+              style="margin: 0"
+            />
+
+            <button class="subscribe__title">Подписаться</button>
+          </div>
+        </div>
       </div>
-      <div class="messenger">
-        <img src="@/assets/icons/vk.svg" />
-      </div>
-      <div class="messenger">
-        <img src="@/assets/icons/telegram.svg" />
-      </div>
-      <div class="messenger">
-        <img src="@/assets/icons/instagram.svg" />
+
+      <div class="footer__info">
+        <div class="address">
+          <p>Адрес: г. Чебоксары, ул. Калинина, д. 101</p>
+        </div>
+
+        <div class="phone">
+          <p>Телефон: +7 (921) 343-87-90</p>
+        </div>
+
+        <div class="mail">
+          <p>E-mail: keik@coffeeshop.ru</p>
+        </div>
       </div>
     </div>
-    <p class="subtitle">© 2024 Кейк</p>
   </div>
 </template>
 
@@ -24,40 +48,103 @@ export default {}
 
 <style lang="scss" scoped>
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  padding: 24px;
-  color: #999999;
-}
+  position: relative;
+  bottom: 0;
+  height: 200px;
+  background-color: $color-black;
+  color: $color-white;
+  font-size: 20px;
 
-.links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  justify-content: center;
-
-  .messenger {
-    border: 2px solid #999999;
+  &__wrapper {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 28px;
-    transition: 200ms;
-    cursor: pointer;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 24px;
+  }
 
-    &:hover {
-      border-color: $color-yellow;
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+
+  &__logo {
+    font-size: 42px;
+    font-family: 'Runde-Semibold';
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 5px rgba($color: #ffffff, $alpha: 0.5);
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+
+    &-item {
+      cursor: pointer;
+
+      &:hover {
+        color: $color-yellow;
+      }
     }
   }
-}
 
-.subtitle:hover {
-  transition: 200ms;
-  color: $color-black;
-  cursor: default;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .subscribe {
+    display: flex;
+    gap: 16px;
+
+    &__input {
+      width: 100%;
+      border-radius: 12px;
+      height: 40px;
+      border: none;
+      padding: 0 16px;
+      background-color: rgba($color: #fff, $alpha: 0.25);
+      color: $color-white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 200ms;
+      outline: none;
+
+      &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.5);
+      }
+    }
+
+    &__title {
+      background-color: $color-white;
+      border-radius: 12px;
+      height: 40px;
+      border: 1px solid $color-white;
+      padding: 0 16px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 200ms;
+
+      &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        color: $color-white;
+      }
+    }
+  }
 }
 </style>
