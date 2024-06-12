@@ -1,0 +1,1 @@
+import{_ as o,c as t,o as e}from"./index-BKNesFcE.js";const s={},c={class:"about"};function a(_,n,r,p,d,f){return e(),t("div",c,"О нас")}const u=o(s,[["render",a],["__scopeId","data-v-1f427194"]]);export{u as default};
