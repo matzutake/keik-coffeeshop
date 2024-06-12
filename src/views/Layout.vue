@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <KHeader style="position: fixed" />
-    <RouterView :key="$route.fullPath" style="margin-top: 60px" />
+    <RouterView :key="$route.fullPath" />
     <KFooter style="margin-top: auto" />
   </div>
 </template>

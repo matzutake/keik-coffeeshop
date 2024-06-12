@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import store from '@/store/index.js'
 
 const router = createRouter({
-  history: createWebHistory('/keik-coffeeshop/'),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',

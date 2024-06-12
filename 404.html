@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>404</title>
+    <script type="text/javascript">
+      var path = window.location.pathname
+      var newPath = '/keik-coffeeshop/'
+
+      if (path && path !== newPath) {
+        window.location.replace(newPath + '#!' + path)
+      } else {
+        window.location.replace(newPath)
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
