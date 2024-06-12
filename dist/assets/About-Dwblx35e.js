@@ -1,1 +1,0 @@
-import{_ as o,c as t,o as e}from"./index-CEAT98ge.js";const s={},c={class:"about"};function a(_,n,r,p,d,f){return e(),t("div",c,"О нас")}const u=o(s,[["render",a],["__scopeId","data-v-2292bf7e"]]);export{u as default};

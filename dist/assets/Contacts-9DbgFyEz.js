@@ -1,1 +1,0 @@
-import{_ as t,c,o}from"./index-CEAT98ge.js";const s={},e={class:"contacts"};function a(n,_,r,p,d,f){return o(),c("div",e,"Контакты")}const l=t(s,[["render",a],["__scopeId","data-v-6b1e8846"]]);export{l as default};

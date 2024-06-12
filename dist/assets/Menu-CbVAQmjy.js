@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as s}from"./index-CEAT98ge.js";const t={},c={class:"menu"};function n(a,_,r,d,p,f){return s(),o("div",c,"Меню")}const u=e(t,[["render",n],["__scopeId","data-v-b3b0fdb1"]]);export{u as default};
