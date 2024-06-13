@@ -1,0 +1,1 @@
+import{N as o}from"./NavTitle-D_aRzcV3.js";import{_ as t,r as s,o as a,c as n,d as c}from"./index-xTOW4KbI.js";const r={components:{NavTitle:o}},_={class:"menu"};function p(d,i,l,m,f,u){const e=s("NavTitle");return a(),n("div",_,[c(e,{title:"Наш ассортимент"})])}const $=t(r,[["render",p],["__scopeId","data-v-d6de122a"]]);export{$ as default};
