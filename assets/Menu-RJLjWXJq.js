@@ -1,0 +1,1 @@
+import{N as o}from"./NavTitle-D5J42na9.js";import{_ as t,c as s,d as a,o as n,r as c}from"./index-BCHc_Ph4.js";const r={components:{NavTitle:o}},_={class:"menu"};function p(d,i,l,m,f,u){const e=c("NavTitle");return n(),s("div",_,[a(e,{title:"Наш ассортимент"})])}const $=t(r,[["render",p],["__scopeId","data-v-d6de122a"]]);export{$ as default};

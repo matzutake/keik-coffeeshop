@@ -1,0 +1,1 @@
+import{N as e}from"./NavTitle-D5J42na9.js";import{_ as o,c as s,d as c,o as a,r as n}from"./index-BCHc_Ph4.js";const r={components:{NavTitle:e}},_={class:"contacts"};function p(i,d,l,m,f,v){const t=n("NavTitle");return a(),s("div",_,[c(t,{title:"Контакты"})])}const $=o(r,[["render",p],["__scopeId","data-v-f5496ec2"]]);export{$ as default};
