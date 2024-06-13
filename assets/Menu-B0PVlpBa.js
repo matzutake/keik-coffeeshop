@@ -1,1 +1,0 @@
-import{_ as e,c,o}from"./index-BKNesFcE.js";const s={},t={class:"menu"};function n(a,_,r,p,d,f){return o(),c("div",t,"Меню")}const u=e(s,[["render",n],["__scopeId","data-v-5ff4c631"]]);export{u as default};
