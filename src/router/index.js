@@ -40,6 +40,12 @@ const router = createRouter({
             title: 'Контакты'
           },
           component: () => import('@/views/nav/Contacts.vue')
+        },
+        {
+          path: '/:catchAll(.*)',
+          redirect: () => {
+            return '/'
+          }
         }
       ]
     }

@@ -1,9 +1,17 @@
 <template>
-  <div class="menu">Меню</div>
+  <div class="menu">
+    <NavTitle title="Наш ассортимент" />
+  </div>
 </template>
 
 <script>
-export default {}
+import NavTitle from '@/components/NavTitle.vue'
+
+export default {
+  components: {
+    NavTitle
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -11,10 +19,8 @@ export default {}
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: center;
   align-self: center;
-  height: 100%;
-  font-size: 32px;
-  font-weight: bold;
+  margin-top: 60px;
+  padding: 40px;
 }
 </style>

@@ -1,9 +1,17 @@
 <template>
-  <div class="contacts">Контакты</div>
+  <div class="contacts">
+    <NavTitle title="Контакты" />
+  </div>
 </template>
 
 <script>
-export default {}
+import NavTitle from '@/components/NavTitle.vue'
+
+export default {
+  components: {
+    NavTitle
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -11,10 +19,8 @@ export default {}
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: center;
   align-self: center;
-  height: 100%;
-  font-size: 32px;
-  font-weight: bold;
+  margin-top: 60px;
+  padding: 40px;
 }
 </style>
