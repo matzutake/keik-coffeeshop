@@ -62,8 +62,15 @@
         }"
       >
         <yandex-map-default-scheme-layer />
-        <yandex-map-marker v-for="(marker, i) in markers" :key="i">
-          <div class="point"></div
+        <yandex-map-default-features-layer />
+        <yandex-map-marker
+          v-for="(marker, i) in markers"
+          :key="i"
+          :settings="marker"
+          position="top left-center"
+        >
+          <div>
+            <img src="@/assets/icons/marker.svg" class="marker" alt="address" /></div
         ></yandex-map-marker>
       </yandex-map>
     </div>
@@ -73,7 +80,12 @@
 <script>
 import NavTitle from '@/components/NavTitle.vue'
 import Feedback from '@/components/Contacts/Feedback.vue'
-import { YandexMap, YandexMapDefaultSchemeLayer, YandexMapMarker } from 'vue-yandex-maps'
+import {
+  YandexMap,
+  YandexMapDefaultSchemeLayer,
+  YandexMapDefaultFeaturesLayer,
+  YandexMapMarker
+} from 'vue-yandex-maps'
 
 export default {
   components: {
@@ -81,11 +93,20 @@ export default {
     Feedback,
     YandexMap,
     YandexMapDefaultSchemeLayer,
-    YandexMapMarker
+    YandexMapMarker,
+    YandexMapDefaultFeaturesLayer
   },
   data() {
     return {
-      markers: [{}]
+      map: null,
+      markers: [
+        {
+          coordinates: [47.270725, 56.139481]
+        },
+        {
+          coordinates: [47.250405, 56.142701]
+        }
+      ]
     }
   }
 }
@@ -185,11 +206,9 @@ export default {
     height: 100%;
   }
 
-  .point {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: $color-yellow;
+  .marker {
+    width: 40px;
+    height: 52px;
   }
 }
 </style>
