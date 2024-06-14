@@ -32,7 +32,7 @@
           Контакты
         </li>
       </ul>
-      <div class="header__button">
+      <div class="header__button" @click="$router.push('/menu')">
         <img src="@/assets/icons/basket.svg" />
         <span>Заказать онлайн</span>
       </div>

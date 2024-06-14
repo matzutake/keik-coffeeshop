@@ -39,11 +39,21 @@
       loop
       class="swiper"
     >
-      <SwiperSlide class="slide">Галерея 1</SwiperSlide>
-      <SwiperSlide class="slide">Галерея 2</SwiperSlide>
-      <SwiperSlide class="slide">Галерея 3</SwiperSlide>
-      <SwiperSlide class="slide">Галерея 4</SwiperSlide>
-      <SwiperSlide class="slide">Галерея 5</SwiperSlide>
+      <SwiperSlide class="slide">
+        <img class="slide__img" src="@/assets/img/gallery/1.png" alt="slide" />
+      </SwiperSlide>
+      <SwiperSlide class="slide">
+        <img class="slide__img" src="@/assets/img/gallery/2.png" alt="slide" />
+      </SwiperSlide>
+      <SwiperSlide class="slide">
+        <img class="slide__img" src="@/assets/img/gallery/3.png" alt="slide" />
+      </SwiperSlide>
+      <SwiperSlide class="slide">
+        <img class="slide__img" src="@/assets/img/gallery/4.png" alt="slide" />
+      </SwiperSlide>
+      <SwiperSlide class="slide">
+        <img class="slide__img" src="@/assets/img/gallery/5.png" alt="slide" />
+      </SwiperSlide>
     </Swiper>
   </div>
 </template>
@@ -126,7 +136,7 @@ export default {
 
 .my-swiper {
   width: 100%;
-  height: 35rem;
+  height: 45rem;
   margin: 60px 0;
 }
 
@@ -138,11 +148,14 @@ export default {
 .slide {
   width: 100%;
   height: 100%;
-  background-color: $color-black;
-  color: $color-white;
-  font-size: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 </style>

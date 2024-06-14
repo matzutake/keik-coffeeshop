@@ -45,6 +45,14 @@
             </ul>
           </li>
         </ul>
+        <div class="messengers">
+          <div class="messengers__title">Наши соц. сети</div>
+          <div class="messengers__hrefs">
+            <img src="@/assets/icons/telegram.svg" alt="telegram" class="messengers__item" />
+            <img src="@/assets/icons/whatsapp.svg" alt="whatsapp" class="messengers__item" />
+            <img src="@/assets/icons/vk.svg" alt="vk" class="messengers__item" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -192,6 +200,35 @@ export default {
     padding: 16px 0;
     letter-spacing: 0.1em;
     width: 100%;
+  }
+}
+
+.messengers {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding: 10px 12px;
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 200ms;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    font-family: 'Runde-Medium';
+    font-size: 20px;
+  }
+
+  &__hrefs {
+    display: flex;
+    gap: 20px;
   }
 }
 
