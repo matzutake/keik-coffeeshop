@@ -36,6 +36,7 @@
       :slides-per-view="1"
       :modules="modules"
       :pagination="{ clickable: true }"
+      :autoplay="{ delay: 3000 }"
       loop
       class="swiper"
     >
@@ -61,7 +62,7 @@
 <script>
 import NavTitle from '@/components/NavTitle.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Pagination } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -78,7 +79,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination]
+      modules: [Pagination, Autoplay]
     }
   }
 }

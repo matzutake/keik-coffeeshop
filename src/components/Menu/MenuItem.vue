@@ -1,6 +1,6 @@
 <template>
   <div class="menu__item">
-    <div class="menu__item-img"></div>
+    <div class="menu__item-img" :style="getImg"></div>
 
     <div class="menu__item-info">
       <div class="menu__item-info__text">
@@ -31,17 +31,28 @@
 <script>
 export default {
   props: {
+    id: {
+      type: Number,
+      default: null
+    },
     title: {
       type: String,
       default: 'Название'
     },
     img: {
       type: String,
-      default: 'capucino'
+      default: 'empty'
     },
     price: {
       type: String,
       default: '110'
+    }
+  },
+  computed: {
+    getImg() {
+      return {
+        '--image': `url('/keik-coffeeshop/src/assets/img/menu/${this.img}.png')`
+      }
     }
   }
 }
@@ -59,7 +70,7 @@ export default {
     height: 320px;
     border-radius: 12px;
     background-size: 90%;
-    background-image: url('@/assets/img/menu/capucino.png');
+    background-image: var(--image);
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -69,7 +80,6 @@ export default {
     gap: 10px;
     padding: 0 6px;
     width: 270px;
-    align-items: center;
     justify-content: space-between;
 
     &__text {
@@ -82,6 +92,9 @@ export default {
   &-title {
     font-size: 20px;
     font-family: 'Runde';
+    max-height: 2.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &-price {
@@ -99,6 +112,7 @@ export default {
 
   border-radius: 8px;
   width: 40px;
+  min-width: 40px;
   height: 48px;
   transition: 200ms;
 

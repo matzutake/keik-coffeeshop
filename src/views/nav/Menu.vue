@@ -7,19 +7,19 @@
         <div class="filter__title">Категория:</div>
         <ul class="filter__categories">
           <li
-            v-for="(category, i) in categories"
-            :key="i"
+            v-for="(category, index) in categories"
+            :key="index"
             class="filter__category"
-            :class="{ active: i === selected }"
-            @click="selected = i"
+            :class="{ active: index === selected }"
+            @click="select(index)"
           >
-            {{ category }}
+            {{ category.name }}
           </li>
         </ul>
       </div>
     </div>
 
-    <MenuBoard />
+    <MenuBoard :value="selectedValue" />
   </div>
 </template>
 
@@ -34,8 +34,44 @@ export default {
   },
   data() {
     return {
-      categories: ['Все', 'Напитки', 'Круассаны', 'Выпечка', 'Завтраки', 'Салаты'],
-      selected: 0
+      categories: [
+        {
+          name: 'Все',
+          value: 'all'
+        },
+        {
+          name: 'Напитки',
+          value: 'drink'
+        },
+        {
+          name: 'Круассаны',
+          value: 'croissant'
+        },
+        {
+          name: 'Выпечка',
+          value: 'bakery'
+        },
+        {
+          name: 'Завтраки',
+          value: 'breakfast'
+        },
+        {
+          name: 'Салаты',
+          value: 'salad'
+        },
+        {
+          name: 'Десерты',
+          value: 'desert'
+        }
+      ],
+      selected: 0,
+      selectedValue: 'all'
+    }
+  },
+  methods: {
+    select(index) {
+      this.selected = index
+      this.selectedValue = this.categories[index].value
     }
   }
 }
