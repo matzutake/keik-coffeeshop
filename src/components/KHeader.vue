@@ -32,9 +32,21 @@
           Контакты
         </li>
       </ul>
-      <div class="header__button" @click="$router.push('/menu')">
-        <img src="@/assets/icons/basket.svg" />
-        <span>Заказать онлайн</span>
+
+      <div class="header__shop">
+        <div
+          :style="$store.state.basketPrice > 0 ? 'visibility: visible' : 'visibility: hidden'"
+          class="header__basket"
+        >
+          <div class="header__basket-wrapper" @click="$router.push('/basket')">
+            <img src="@/assets/icons/basket.svg" alt="basket" />
+            <span>{{ $store.state.basketPrice }} ₽</span>
+          </div>
+        </div>
+
+        <div class="header__button" @click="$router.push('/menu')">
+          <span>Заказать онлайн</span>
+        </div>
       </div>
     </div>
   </div>
@@ -82,7 +94,8 @@ export default {}
   &__nav {
     display: flex;
     align-items: center;
-    flex: 0.4;
+    flex: 0.8;
+    max-width: 40%;
     justify-content: space-between;
   }
 
@@ -109,12 +122,43 @@ export default {}
     cursor: pointer;
     border: 1px solid $color-yellow;
     border-radius: 16px;
-    padding: 8px 16px;
+    padding: 10px 16px;
     font-size: 16px;
     transition: 200ms;
 
     &:hover {
       background-color: rgba($color: #ffffff, $alpha: 0.3);
+    }
+  }
+
+  &__shop {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__basket {
+    position: absolute;
+    left: calc(-80%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 6px;
+      border-radius: 8px;
+      transition: 200ms;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.3);
+        border-color: $color-white;
+      }
     }
   }
 }

@@ -45,6 +45,14 @@ const router = createRouter({
           component: () => import('@/views/nav/Contacts.vue')
         },
         {
+          path: 'basket',
+          name: 'basket',
+          meta: {
+            title: 'Корзина'
+          },
+          component: () => import('@/views/nav/Basket.vue')
+        },
+        {
           path: '/:catchAll(.*)',
           redirect: () => {
             return '/'

@@ -1,6 +1,6 @@
 <template>
   <div class="menu__item">
-    <div class="menu__item-img" :style="getImg"></div>
+    <img :src="imgSet" class="menu__item-img" />
 
     <div class="menu__item-info">
       <div class="menu__item-info__text">
@@ -8,7 +8,13 @@
         <div class="menu__item-price">{{ price }} ₽</div>
       </div>
 
-      <div class="add">
+      <div class="counter" v-if="inBasket.length">
+        <div class="counter__button" @click="removeFromBasket">-</div>
+        <div class="counter__value">{{ inBasket.length }}</div>
+        <div class="counter__button" @click="addToBasket">+</div>
+      </div>
+
+      <div v-if="!inBasket.length" class="add" @click="addToBasket">
         <svg
           width="24"
           height="24"
@@ -29,6 +35,8 @@
 </template>
 
 <script>
+import * as menu from '@/assets/img/menu'
+
 export default {
   props: {
     id: {
@@ -44,15 +52,24 @@ export default {
       default: 'empty'
     },
     price: {
-      type: String,
-      default: '110'
+      type: Number,
+      default: 0
     }
   },
   computed: {
-    getImg() {
-      return {
-        '--image': `url('/keik-coffeeshop/src/assets/img/menu/${this.img}.png')`
-      }
+    imgSet() {
+      return menu[this.img]
+    },
+    inBasket() {
+      return this.$store.getters.getBasket.filter((item) => item.id === this.id)
+    }
+  },
+  methods: {
+    addToBasket() {
+      this.$store.commit('addToBasket', this.id)
+    },
+    removeFromBasket() {
+      this.$store.commit('removeFromBasket', this.id)
     }
   }
 }
@@ -69,10 +86,6 @@ export default {
     width: 270px;
     height: 320px;
     border-radius: 12px;
-    background-size: 90%;
-    background-image: var(--image);
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   &-info {
@@ -129,6 +142,41 @@ export default {
         stroke: $color-white;
       }
     }
+  }
+}
+
+.counter {
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+  font-family: 'Runde-Medium';
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $color-border;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    transition: 200ms;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-yellow;
+      color: $color-white;
+      border-color: $color-yellow;
+    }
+  }
+
+  &__value {
+    font-size: 20px;
+    font-family: 'Runde-Medium';
+    height: 40px;
+    width: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
