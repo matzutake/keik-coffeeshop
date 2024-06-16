@@ -128,22 +128,23 @@
       <span class="title">Кейк</span>
     </div>
     <script>
-      // Перенаправление при обновлении страницы на корневой путь
-      ;(function () {
-        var path = window.location.pathname
+      // Проверяем, что режим истории поддерживается браузером
+      if (window.history && window.history.pushState) {
+        window.addEventListener('load', function () {
+          // Получаем текущий путь после загрузки страницы
+          var currentPath = window.location.pathname
 
-        // Проверяем, что путь не является корневым путем
-        if (path !== '/') {
-          // Редирект на корневой путь
-          window.location.replace('/')
+          // Редиректим пользователя на корневой путь при обновлении
+          if (currentPath !== '/' && !currentPath.startsWith('/#')) {
+            window.history.replaceState(null, null, '/')
+          }
 
           // После загрузки на корневом пути, редирект обратно на исходный путь
-          window.onload = function () {
-            var fullPath = window.location.origin + path
-            window.location.replace(fullPath)
-          }
-        }
-      })()
+          setTimeout(function () {
+            window.history.replaceState(null, null, currentPath)
+          }, 0)
+        })
+      }
     </script>
   </body>
 </html>
