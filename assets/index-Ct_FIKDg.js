@@ -1,0 +1,1 @@
+const e="/keik-coffeeshop/assets/capucino-CVak-9d1.png",o="/keik-coffeeshop/assets/empty-n2VQpy-9.png",t=Object.freeze(Object.defineProperty({__proto__:null,capucino:e,empty:o},Symbol.toStringTag,{value:"Module"}));export{o as e,t as m};
