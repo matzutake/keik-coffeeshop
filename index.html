@@ -133,7 +133,7 @@
         var path = window.location.pathname
 
         // Проверяем, что путь не является корневым путем
-        if (path !== '/' && !path.startsWith('/#')) {
+        if (path !== '/') {
           // Редирект на корневой путь
           window.location.replace('/')
 
