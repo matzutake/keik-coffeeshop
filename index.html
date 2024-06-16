@@ -126,24 +126,6 @@
         </svg>
       </div>
       <span class="title">Кейк</span>
-    </div>
-    <script>
-      if (window.history && window.history.pushState) {
-        window.addEventListener('load', function () {
-          // Получаем текущий путь после загрузки страницы
-          var currentPath = window.location.pathname
-          console.log(currentPath)
-
-          if (currentPath !== '/keik-coffeeshop/') {
-            window.history.replaceState(null, null, '/keik-coffeeshop/')
-          }
-
-          setTimeout(function () {
-            window.history.replaceState(null, null, currentPath)
-          }, 0)
-        })
-      }
-    </script>
-
+    </div>
   </body>
 </html>
