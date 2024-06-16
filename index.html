@@ -126,6 +126,26 @@
         </svg>
       </div>
       <span class="title">Кейк</span>
-    </div>
+    </div>
+    <script>
+      // Проверяем, что режим истории поддерживается браузером
+      if (window.history && window.history.pushState) {
+        window.addEventListener('load', function () {
+          // Получаем текущий путь после загрузки страницы
+          var currentPath = window.location.pathname
+
+          // Редиректим пользователя на основной путь при обновлении
+          if (currentPath !== '/' && !currentPath.startsWith('/#')) {
+            window.history.replaceState(null, null, '/')
+          }
+
+          // После загрузки на основном пути, редирект обратно на исходный путь
+          setTimeout(function () {
+            window.history.replaceState(null, null, currentPath)
+          }, 0)
+        })
+      }
+    </script>
+
   </body>
 </html>
