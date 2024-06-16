@@ -127,5 +127,23 @@
       </div>
       <span class="title">Кейк</span>
     </div>
+    <script>
+      // Перенаправление при обновлении страницы на корневой путь
+      ;(function () {
+        var path = window.location.pathname
+
+        // Проверяем, что путь не является корневым путем
+        if (path !== '/' && !path.startsWith('/#')) {
+          // Редирект на корневой путь
+          window.location.replace('/')
+
+          // После загрузки на корневом пути, редирект обратно на исходный путь
+          window.onload = function () {
+            var fullPath = window.location.origin + path
+            window.location.replace(fullPath)
+          }
+        }
+      })()
+    </script>
   </body>
 </html>
