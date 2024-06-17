@@ -5,7 +5,9 @@
     <div class="basket-wrapper">
       <ul class="basket-list">
         <li v-for="(item, i) in Basket" :key="i" class="basket-item">
-          <img :src="imgSet(item.img)" class="basket-item__img" />
+          <div class="basket-item__img-wrapper">
+            <img :src="imgSet(item.img)" class="basket-item__img" />
+          </div>
 
           <div class="basket-item__info">
             <div class="basket-item__info-title">{{ item.title }}</div>
@@ -99,9 +101,19 @@ export default {
     gap: 20px;
 
     &__img {
-      width: 150px;
-      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
+      object-fit: cover;
+      width: 70%;
+
+      &-wrapper {
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+      }
     }
 
     &__info {

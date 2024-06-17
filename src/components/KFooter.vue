@@ -26,11 +26,12 @@
       </div>
 
       <div class="footer__info">
-        <div class="address">
-          <p>Адрес: г. Чебоксары, ул. Калинина, д. 101</p>
-        </div>
+        <ul class="address">
+          <li>Адрес: г. Чебоксары, ул. Калинина, д. 101,</li>
+          <li style="margin-top: 10px">г. Чебоксары, ул. Карла Маркса, д. 24</li>
+        </ul>
 
-        <div class="phone">
+        <div class="phone" style="flex: 0.52">
           <p>Телефон: +7 (921) 343-87-90</p>
         </div>
 

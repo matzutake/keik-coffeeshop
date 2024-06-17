@@ -58,10 +58,6 @@ export default {
         {
           name: 'Салаты',
           value: 'salad'
-        },
-        {
-          name: 'Десерты',
-          value: 'desert'
         }
       ],
       selected: 0,

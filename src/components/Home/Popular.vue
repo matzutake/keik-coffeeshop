@@ -6,18 +6,18 @@
 
     <div class="popular__drinks">
       <div class="drink">
-        <img src="@/assets/img/capucino.png" class="drink__img" />
+        <img src="@/assets/img/menu/caramelLatte.png" class="drink__img" style="height: 320px" />
+        <div class="label">Карамельный латте</div>
+      </div>
+
+      <div class="drink">
+        <img src="@/assets/img/menu/capucino.png" class="drink__img" />
         <div class="label">Капучино</div>
       </div>
 
       <div class="drink">
-        <img src="@/assets/img/raf.png" class="drink__img" />
-        <div class="label">Раф</div>
-      </div>
-
-      <div class="drink">
-        <img src="@/assets/img/matcha.png" class="drink__img" />
-        <div class="label">Матча-латте</div>
+        <img src="@/assets/img/menu/popcornRaf.png" class="drink__img" style="margin-top: 50px" />
+        <div class="label">Попкорн Раф</div>
       </div>
     </div>
   </div>
@@ -55,15 +55,18 @@ export default {}
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 10px;
     font-size: 24px;
     font-weight: bold;
+    height: 400px;
+    width: 400px;
+    justify-content: space-between;
     transition: 200ms;
     cursor: pointer;
 
     &__img {
-      width: 400px;
+      width: 250px;
+      object-fit: cover;
     }
 
     &:hover {

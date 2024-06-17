@@ -1,6 +1,8 @@
 <template>
   <div class="menu__item">
-    <img :src="imgSet" class="menu__item-img" />
+    <div class="menu__item-img-wrapper">
+      <img :src="imgSet" class="menu__item-img" />
+    </div>
 
     <div class="menu__item-info">
       <div class="menu__item-info__text">
@@ -83,9 +85,19 @@ export default {
   cursor: pointer;
 
   &-img {
-    width: 270px;
-    height: 320px;
     border-radius: 12px;
+    width: 190px;
+    object-fit: cover;
+
+    &-wrapper {
+      width: 270px;
+      height: 320px;
+      overflow: hidden;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &-info {
