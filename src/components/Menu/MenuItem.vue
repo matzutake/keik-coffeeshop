@@ -191,4 +191,40 @@ export default {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .menu__item {
+    &-img-wrapper {
+      width: 120px;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      height: 180px;
+    }
+
+    &-img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .menu__item {
+    &-info {
+      width: 100%;
+      display: flex;
+
+      &__text {
+        width: 100px;
+      }
+    }
+
+    &__text {
+      width: 150px;
+    }
+
+    &-title {
+      font-size: 16px;
+    }
+  }
+}
 </style>

@@ -51,9 +51,9 @@ export default {}
 .footer {
   position: relative;
   bottom: 0;
-  height: 200px;
   background-color: $color-black;
   color: $color-white;
+  padding: 30px 0;
   font-size: 20px;
 
   &__wrapper {
@@ -145,6 +145,28 @@ export default {}
         background-color: rgba($color: #fff, $alpha: 0.3);
         color: $color-white;
       }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    &__wrapper {
+      max-width: 100%;
+    }
+
+    .nav {
+      flex-direction: column;
+      gap: 20px;
+      font-size: 15px;
+    }
+
+    &__nav {
+      gap: 20px;
+    }
+
+    &__info {
+      flex-direction: column;
+      gap: 16px;
+      font-size: 15px;
     }
   }
 }

@@ -73,5 +73,25 @@ export default {}
       color: $color-yellow;
     }
   }
+
+  @media screen and (max-width: 960px) {
+    .popular__drinks {
+      flex-direction: column;
+    }
+
+    .drink__img {
+      width: 180px;
+      object-fit: contain;
+    }
+
+    .drink {
+      height: 300px;
+      width: 300px;
+    }
+    .popular__title {
+      font-size: 28px;
+      height: 100px;
+    }
+  }
 }
 </style>

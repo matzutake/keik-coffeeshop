@@ -56,5 +56,11 @@ export default {}
       text-shadow: 0 0 5px rgba($color: #ffffff, $alpha: 0.5);
     }
   }
+
+  @media screen and (max-width: 960px) {
+    &__text {
+      width: 70%;
+    }
+  }
 }
 </style>

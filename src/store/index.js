@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     pageTitle: '',
+    navigation: false,
     menu: [
       {
         id: 3,
@@ -335,6 +336,9 @@ export default createStore({
           break
         }
       }
+    },
+    toggleNav(state) {
+      state.navigation = !state.navigation
     }
   },
   getters: {
@@ -346,6 +350,9 @@ export default createStore({
     },
     getItemCount: (state) => (id) => {
       return state.basket.filter((item) => item.id === id).length
+    },
+    getNav(state) {
+      return state.navigation
     }
   }
 })

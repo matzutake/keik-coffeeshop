@@ -47,6 +47,9 @@
         <div class="header__button" @click="$router.push('/menu')">
           <span>Заказать онлайн</span>
         </div>
+        <div class="header__burger" @click="$store.commit('toggleNav')">
+          <img src="@/assets/icons/burger.svg" alt="burger" width="48" />
+        </div>
       </div>
     </div>
   </div>
@@ -159,6 +162,32 @@ export default {}
         background-color: rgba($color: #ffffff, $alpha: 0.3);
         border-color: $color-white;
       }
+    }
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 960px) {
+    &__nav {
+      display: none;
+    }
+    &__button {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    &__wrapper {
+      max-width: 90%;
     }
   }
 }

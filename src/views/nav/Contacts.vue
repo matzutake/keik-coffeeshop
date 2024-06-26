@@ -248,4 +248,28 @@ export default {
     height: 52px;
   }
 }
+
+@media (max-width: 960px) {
+  .contacts-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .info-block {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .info {
+    align-items: center;
+    text-align: center;
+    width: 90%;
+  }
+
+  .contacts {
+    padding: 0;
+    margin-top: 80px;
+  }
+}
 </style>

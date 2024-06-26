@@ -114,5 +114,16 @@ export default {}
       color: $color-white;
     }
   }
+
+  @media screen and (max-width: 960px) {
+    &__list {
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+  }
 }
 </style>

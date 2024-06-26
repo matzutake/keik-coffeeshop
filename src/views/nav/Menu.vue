@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <NavTitle title="Наш ассортимент" />
+    <NavTitle title="Наш ассортимент" class="menu__title" />
 
     <div class="filter">
       <div class="filter__wrapper">
@@ -120,6 +120,28 @@ export default {
       &.active {
         background-color: $color-yellow;
         color: $color-white;
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    margin-top: 80px;
+    padding: 0;
+    gap: 10px;
+
+    .filter {
+      &__wrapper {
+        flex-direction: column;
+      }
+
+      &__categories {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 95;
+
+        li {
+          padding: 6px 12px;
+        }
       }
     }
   }

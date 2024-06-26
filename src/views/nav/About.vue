@@ -159,4 +159,15 @@ export default {
     object-fit: cover;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .info__text {
+    text-align: justify;
+  }
+
+  .about {
+    padding: 32px;
+    margin: 50px 0;
+  }
+}
 </style>

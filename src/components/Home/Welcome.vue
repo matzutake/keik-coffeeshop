@@ -64,4 +64,20 @@ export default {}
     }
   }
 }
+
+@media screen and (max-width: 960px) {
+  .welcome {
+    padding: 20px 0;
+
+    &__img {
+      display: none;
+    }
+  }
+
+  .welcome-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+}
 </style>

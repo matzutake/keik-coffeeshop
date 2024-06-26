@@ -29,12 +29,26 @@ export default {}
   }
 
   &__title {
+    text-align: center;
     font-size: 32px;
     font-weight: bold;
   }
 
   &__description {
     font-size: 20px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 960px) {
+    &__description {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    height: 100px;
   }
 }
 </style>

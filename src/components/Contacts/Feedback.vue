@@ -103,4 +103,10 @@ export default {}
 .textarea {
   resize: none;
 }
+
+@media screen and (max-width: 960px) {
+  .feedback {
+    width: 300px;
+  }
+}
 </style>

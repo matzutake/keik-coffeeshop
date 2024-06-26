@@ -37,4 +37,17 @@ export default {
     margin-bottom: 4%;
   }
 }
+
+@media (max-width: 960px) {
+  .menu-list {
+    width: 100%;
+    padding: 10px 6px;
+    gap: 4%;
+
+    &__item {
+      flex: 0 1 44%;
+      gap: 0;
+    }
+  }
+}
 </style>
